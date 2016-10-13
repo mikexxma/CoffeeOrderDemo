@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="OrderAppDesignDemo.CoffeePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrderAppDesignDemo.Assets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/coffeeOrderRes/MyAppResDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="Assets/coffeeOrderRes/bg4.jpg"  Grid.RowSpan="4" Grid.ColumnSpan="2" Stretch="Fill"></Image>
+        <Image  Margin="10,10,10,10" Source="Assets/coffeeOrderRes/Logo.svg.png" Width="100" Height="100" Stretch="Uniform"></Image>
+        <RelativePanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Style="{StaticResource OrderBtStyle}" Name="CoffeeChoseBt" Content="Coffee" Margin="0,0,10,0">
+                <Button.Flyout>
+                    <MenuFlyout x:Name="CoffeeFlyout" Placement="Bottom" Closed="CoffeeFlyout_Closed">
+                        <MenuFlyoutItem Text="拿铁"></MenuFlyoutItem>
+                        <MenuFlyoutItem Text="卡布奇诺"></MenuFlyoutItem>
+                        <MenuFlyoutItem Text="猫屎"></MenuFlyoutItem>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+            <Button Style="{StaticResource OrderBtStyle}" Name="SugerChoseBt" RelativePanel.RightOf="CoffeeChoseBt" Content="Suger" Margin="0,0,10,0">
+                <Button.Flyout>
+                    <MenuFlyout x:Name="SugerFlyout" Placement="Bottom">
+                        <MenuFlyoutItem Text="少糖"></MenuFlyoutItem>
+                        <MenuFlyoutItem Text="多糖"></MenuFlyoutItem>
+                        <MenuFlyoutItem Text="无糖"></MenuFlyoutItem>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+            <Button Style="{StaticResource OrderBtStyle}" Name="MikeChoseBt" RelativePanel.RightOf="SugerChoseBt" Content="Milk" Margin="0,0,10,0">
+                <Button.Flyout>
+                    <MenuFlyout x:Name="MilkFlyout" Placement="Bottom">
+                        <MenuFlyoutItem Text="加牛奶"></MenuFlyoutItem>
+                        <MenuFlyoutItem Text="不加牛奶"></MenuFlyoutItem>
+                    </MenuFlyout >
+                </Button.Flyout>
+
+            </Button>
+        </RelativePanel>
+        <TextBlock Grid.Row="2" Text="你选择的咖啡 : " Margin="15,10,10,10"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" Name="ChoseCoffeeResult"></TextBlock>
+    </Grid>
+</Page>

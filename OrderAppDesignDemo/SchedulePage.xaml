@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="OrderAppDesignDemo.SchedulePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OrderAppDesignDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/coffeeOrderRes/MyAppResDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="Assets/coffeeOrderRes/bg4.jpg"  Grid.RowSpan="5" Grid.ColumnSpan="2" Stretch="Fill"></Image>
+        <Image  Margin="10,10,10,10" Source="Assets/coffeeOrderRes/Logo.svg.png" Width="100" Height="100" Stretch="Uniform"></Image>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="选择送货日期 ： " Margin="20,0,0,0" Style="{StaticResource OrderTextStyle}"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="选择送货时间 ： " Margin="20,0,0,0" Style="{StaticResource OrderTextStyle}"></TextBlock>
+        <DatePicker Grid.Column="1" Grid.Row="1"></DatePicker>
+        <TimePicker Grid.Column="1" Grid.Row="2"></TimePicker>
+        <TextBlock Grid.Column="0" Grid.Row="3"  Margin="20,0,0,0" Text="送货时间是 :" Style="{StaticResource OrderTextStyle}"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" Margin="20,0,0,0" Name="SendCoffeeTimeResut" HorizontalAlignment="Center"></TextBlock>
+    </Grid>
+</Page>
