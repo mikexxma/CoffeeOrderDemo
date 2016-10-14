@@ -29,8 +29,8 @@
         <Image  Margin="10,10,10,10" Source="Assets/coffeeOrderRes/Logo.svg.png" Width="100" Height="100" Stretch="Uniform"></Image>
         <TextBlock Grid.Column="0" Grid.Row="1" Text="选择送货日期 ： " Margin="20,0,0,0" Style="{StaticResource OrderTextStyle}"></TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="2" Text="选择送货时间 ： " Margin="20,0,0,0" Style="{StaticResource OrderTextStyle}"></TextBlock>
-        <DatePicker Grid.Column="1" Grid.Row="1"></DatePicker>
-        <TimePicker Grid.Column="1" Grid.Row="2"></TimePicker>
+        <DatePicker Name="MyDatePicker"  Grid.Column="1" Grid.Row="1" DateChanged="DatePicker_DateChanged"></DatePicker>
+        <TimePicker Name="MyTimePicker" Grid.Column="1" Grid.Row="2" TimeChanged="TimePicker_TimeChanged"></TimePicker>
         <TextBlock Grid.Column="0" Grid.Row="3"  Margin="20,0,0,0" Text="送货时间是 :" Style="{StaticResource OrderTextStyle}"></TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="3" Margin="20,0,0,0" Name="SendCoffeeTimeResut" HorizontalAlignment="Center"></TextBlock>
     </Grid>

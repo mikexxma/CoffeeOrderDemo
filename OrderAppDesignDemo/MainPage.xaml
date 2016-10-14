@@ -24,11 +24,11 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Name="DessertBt" Style="{StaticResource OrderBtStyle}" Content="点甜点" Click="DessertBt_Click"></Button>
-        <Button Name="CoffeeBt" Style="{StaticResource OrderBtStyle}" Grid.Column="1" Content="点咖啡" Click="CoffeeBt_Click"></Button>
-        <Button Name="ScheduleBt" Style="{StaticResource OrderBtStyle}" Grid.Column="2" Content="选择送货日期" Click="ScheduleBt_Click"></Button>
-        <Button Name="OrderNumBt" Style="{StaticResource OrderBtStyle}" Grid.Column="3" Content="你的订单号"></Button>
-        <SplitView Name="OrderSplit" Grid.Row="1" Grid.ColumnSpan="4" OpenPaneLength="650" CompactPaneLength="0" DisplayMode="CompactOverlay">
+        <Button Name="DessertBt" Style="{StaticResource OrderBtStyle}" Content="点甜点" Click="DessertBt_Click" BorderBrush="White" BorderThickness="2,0,2,0"></Button>
+        <Button Name="CoffeeBt" Style="{StaticResource OrderBtStyle}" Grid.Column="1" Content="点咖啡" Click="CoffeeBt_Click" BorderBrush="White" BorderThickness="2,0,2,0"></Button>
+        <Button Name="ScheduleBt" Style="{StaticResource OrderBtStyle}" Grid.Column="2" Content="选择送货日期" Click="ScheduleBt_Click" BorderBrush="White" BorderThickness="2,0,2,0"></Button>
+        <Button Name="OrderNumBt" Style="{StaticResource OrderBtStyle}" Grid.Column="3" Content="你的订单号" BorderBrush="White" BorderThickness="2,0,2,0"></Button>
+        <SplitView Name="OrderSplit" Grid.Row="1" Grid.ColumnSpan="4" OpenPaneLength="800" CompactPaneLength="0" DisplayMode="CompactOverlay">
             <SplitView.Pane>
                 <Frame Name="OrderPage"></Frame>
             </SplitView.Pane>

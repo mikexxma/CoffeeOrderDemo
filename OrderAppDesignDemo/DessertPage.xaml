@@ -26,10 +26,10 @@
         </Grid.ColumnDefinitions>
         <Image Source="Assets/coffeeOrderRes/bg4.jpg"  Grid.RowSpan="4" Grid.ColumnSpan="2" Stretch="Fill"></Image> 
         <Image  Margin="10,10,10,10" Source="Assets/coffeeOrderRes/Logo.svg.png" Width="100" Height="100" Stretch="Uniform"></Image>
-        <TextBlock VerticalAlignment="Center" Style="{StaticResource OrderTextStyle}" Text="甜甜圈个数： " Grid.Row="1"></TextBlock>
-        <TextBlock VerticalAlignment="Center" Style="{StaticResource OrderTextStyle}" Text="蛋糕个数： " Grid.Row="2"></TextBlock>
-        <Slider VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Maximum="100" Width="150"></Slider>
-        <Slider VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Maximum="100" Width="150"></Slider>
+        <TextBlock Margin="20,0,0,0" VerticalAlignment="Center" Style="{StaticResource OrderTextStyle}" Text="甜甜圈个数： " Grid.Row="1"></TextBlock>
+        <TextBlock  Margin="20,0,0,0" VerticalAlignment="Center" Style="{StaticResource OrderTextStyle}" Text="蛋糕个数： " Grid.Row="2"></TextBlock>
+        <Slider Name="DonutsNum" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Maximum="100" Width="150" DragLeave="DonutsNum_DragLeave"></Slider>
+        <Slider Name="CakeNum" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Maximum="100" Width="150" DragLeave="CakeNum_DragLeave"></Slider>
 
     </Grid>
 </Page>

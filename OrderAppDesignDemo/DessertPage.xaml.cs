@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderAppDesignDemo;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,21 @@ namespace OrderAppDesignDemo
         public DessertPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Slider_DragLeave(object sender, DragEventArgs e)
+        {
+            
+        }
+
+        private void DonutsNum_DragLeave(object sender, DragEventArgs e)
+        {
+            App.order.OrderedDonuts = Convert.ToInt32(DonutsNum.Value);
+        }
+
+        private void CakeNum_DragLeave(object sender, DragEventArgs e)
+        {
+            App.order.OrderedCake = Convert.ToInt32(CakeNum.Value);
         }
     }
 }
